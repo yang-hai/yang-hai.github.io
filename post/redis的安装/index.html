@@ -2,30 +2,30 @@
 <html lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
 <meta charset="utf-8">
-<title>redis的一些简单操作 - Yang hai&#39;s blog</title>
+<title>redis基础 - Yang hai&#39;s blog</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://yoursite.com/post/redis的安装/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
-<meta name="description" content="jobs 查看后台进程bg %编号 让指定的后台进程在后台运行fg %编号 让进程在前台运行ctrl + z 将前台进程放到后台ctrl + c 让前台进程停下来在命令后加&amp;amp;   让进程直接在后台运行 redis以键值对形式存放数据的数据库提供高速缓存服务 - 缓存热点数据访问量大数据量不大缓解了数据的压力 （高频访问数据不用直接访问数据库）默认包含16个数据库(select num)">
+<meta name="description" content="jobs 查看后台进程bg %编号 让指定的后台进程在后台运行fg %编号 让进程在前台运行ctrl + z 将前台进程放到后台ctrl + c 让前台进程停下来在命令后加&amp;amp;   让进程直接在后台运行 yum install redis redis以键值对形式存放数据的数据库提供高速缓存服务 - 缓存热点数据访问量大数据量不大缓解了数据的压力 （高频访问数据不用直接访问数据库）默认包含16">
 <meta property="og:type" content="website">
-<meta property="og:title" content="redis的一些简单操作">
+<meta property="og:title" content="redis基础">
 <meta property="og:url" content="http://yoursite.com/post/redis的安装/index.html">
 <meta property="og:site_name" content="Yang hai&#39;s blog">
-<meta property="og:description" content="jobs 查看后台进程bg %编号 让指定的后台进程在后台运行fg %编号 让进程在前台运行ctrl + z 将前台进程放到后台ctrl + c 让前台进程停下来在命令后加&amp;amp;   让进程直接在后台运行 redis以键值对形式存放数据的数据库提供高速缓存服务 - 缓存热点数据访问量大数据量不大缓解了数据的压力 （高频访问数据不用直接访问数据库）默认包含16个数据库(select num)">
+<meta property="og:description" content="jobs 查看后台进程bg %编号 让指定的后台进程在后台运行fg %编号 让进程在前台运行ctrl + z 将前台进程放到后台ctrl + c 让前台进程停下来在命令后加&amp;amp;   让进程直接在后台运行 yum install redis redis以键值对形式存放数据的数据库提供高速缓存服务 - 缓存热点数据访问量大数据量不大缓解了数据的压力 （高频访问数据不用直接访问数据库）默认包含16">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/post/redis的安装/touxiang.jpg">
-<meta property="og:updated_time" content="2018-12-27T14:49:10.492Z">
+<meta property="og:updated_time" content="2019-01-22T07:11:00.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis的一些简单操作">
-<meta name="twitter:description" content="jobs 查看后台进程bg %编号 让指定的后台进程在后台运行fg %编号 让进程在前台运行ctrl + z 将前台进程放到后台ctrl + c 让前台进程停下来在命令后加&amp;amp;   让进程直接在后台运行 redis以键值对形式存放数据的数据库提供高速缓存服务 - 缓存热点数据访问量大数据量不大缓解了数据的压力 （高频访问数据不用直接访问数据库）默认包含16个数据库(select num)">
+<meta name="twitter:title" content="redis基础">
+<meta name="twitter:description" content="jobs 查看后台进程bg %编号 让指定的后台进程在后台运行fg %编号 让进程在前台运行ctrl + z 将前台进程放到后台ctrl + c 让前台进程停下来在命令后加&amp;amp;   让进程直接在后台运行 yum install redis redis以键值对形式存放数据的数据库提供高速缓存服务 - 缓存热点数据访问量大数据量不大缓解了数据的压力 （高频访问数据不用直接访问数据库）默认包含16">
 <meta name="twitter:image" content="http://yoursite.com/post/redis的安装/touxiang.jpg">
 <link rel="stylesheet" href="/theme.b8edec00089439363aa8.css">
 <link rel="stylesheet" href="/fonts.e15b7f98c5fa14803416.css">
 <link rel="stylesheet" href="/styles.91c0737f5ab4ce91ab20.css">
-<script src="/config.ae298556ab7de08511d9.js"></script>
+<script src="/config.87a062783fa0366502e3.js"></script>
 {% if theme.canvas_nest %}
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 {% endif %}
