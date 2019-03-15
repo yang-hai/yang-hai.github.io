@@ -2,30 +2,30 @@
 <html lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
 <meta charset="utf-8">
-<title>Linux-软硬连接 - Yang hai&#39;s blog</title>
+<title>Linux-软硬链接 - Yang hai&#39;s blog</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://yoursite.com/post/软硬连接/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
-<meta name="description" content="软连接：创建一个快捷方式，删除源文件快捷方式无效硬链接：创建一个新的档案名，不是创建新的档案。删除源文件后，可以通过新的档案名打开源文件内容。 硬链接节省空间一些，但是有一些不足之处：1.不能给目录创建硬链接2.只能在同一个文件系统分区中创建硬链接软连接可以在任何位置创建">
+<meta name="description" content="软硬链接区别： 1.使用限制 硬链接必须是在同一个文件系统下，不能对目录进行链接 软链接可以跨文件系统 可以对不存在的文件进行链接 可以对目录进行链接 2..磁盘利用率 硬链接使用的是同一个i节点，指向同一个数据块，并不会复制文件，所以硬链接是不占用磁盘空间，类似语言中的引用 软连接文件中存放的被链接的文件路径，两者的i节点不同，占用磁盘很小的空间，有点类似指针，指针的内容是地址 3.文件删除 硬">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Linux-软硬连接">
+<meta property="og:title" content="Linux-软硬链接">
 <meta property="og:url" content="http://yoursite.com/post/软硬连接/index.html">
 <meta property="og:site_name" content="Yang hai&#39;s blog">
-<meta property="og:description" content="软连接：创建一个快捷方式，删除源文件快捷方式无效硬链接：创建一个新的档案名，不是创建新的档案。删除源文件后，可以通过新的档案名打开源文件内容。 硬链接节省空间一些，但是有一些不足之处：1.不能给目录创建硬链接2.只能在同一个文件系统分区中创建硬链接软连接可以在任何位置创建">
+<meta property="og:description" content="软硬链接区别： 1.使用限制 硬链接必须是在同一个文件系统下，不能对目录进行链接 软链接可以跨文件系统 可以对不存在的文件进行链接 可以对目录进行链接 2..磁盘利用率 硬链接使用的是同一个i节点，指向同一个数据块，并不会复制文件，所以硬链接是不占用磁盘空间，类似语言中的引用 软连接文件中存放的被链接的文件路径，两者的i节点不同，占用磁盘很小的空间，有点类似指针，指针的内容是地址 3.文件删除 硬">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/post/软硬连接/touxiang.jpg">
-<meta property="og:updated_time" content="2018-12-26T12:43:49.516Z">
+<meta property="og:updated_time" content="2019-03-15T12:18:07.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux-软硬连接">
-<meta name="twitter:description" content="软连接：创建一个快捷方式，删除源文件快捷方式无效硬链接：创建一个新的档案名，不是创建新的档案。删除源文件后，可以通过新的档案名打开源文件内容。 硬链接节省空间一些，但是有一些不足之处：1.不能给目录创建硬链接2.只能在同一个文件系统分区中创建硬链接软连接可以在任何位置创建">
+<meta name="twitter:title" content="Linux-软硬链接">
+<meta name="twitter:description" content="软硬链接区别： 1.使用限制 硬链接必须是在同一个文件系统下，不能对目录进行链接 软链接可以跨文件系统 可以对不存在的文件进行链接 可以对目录进行链接 2..磁盘利用率 硬链接使用的是同一个i节点，指向同一个数据块，并不会复制文件，所以硬链接是不占用磁盘空间，类似语言中的引用 软连接文件中存放的被链接的文件路径，两者的i节点不同，占用磁盘很小的空间，有点类似指针，指针的内容是地址 3.文件删除 硬">
 <meta name="twitter:image" content="http://yoursite.com/post/软硬连接/touxiang.jpg">
 <link rel="stylesheet" href="/theme.b8edec00089439363aa8.css">
 <link rel="stylesheet" href="/fonts.e15b7f98c5fa14803416.css">
 <link rel="stylesheet" href="/styles.91c0737f5ab4ce91ab20.css">
-<script src="/config.eafde213c4aaa151d9b9.js"></script>
+<script src="/config.7a97c6799f1efaca929d.js"></script>
 {% if theme.canvas_nest %}
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 {% endif %}
